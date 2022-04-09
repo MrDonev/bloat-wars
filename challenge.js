@@ -6,6 +6,12 @@
   'hello world' would become 'HeLlO wOrLd'  
 */
 
-function alternateCase() {}
-
+function alternateCase(str) {
+  return str.split('').map((el,index) => {
+      return  index % 2 == 0
+        ? el.toUpperCase()
+        : el.toLowerCase();
+    });
+  }
+  
 module.exports = alternateCase;
